@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['prefix' => 'incomes'], function() {
+    Route::get('/type', 'Api\IncomeTypeController@index');
+    Route::post('/create', 'Api\IncomeController@store');
+    Route::post('/{id}/edit', 'Api\IncomeController@update');
+    Route::post('/{id}/delete', 'Api\IncomeController@delete');
+});
+
