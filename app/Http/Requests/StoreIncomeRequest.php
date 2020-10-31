@@ -28,7 +28,7 @@ class StoreIncomeRequest extends FormRequest
         return [
             'type' => 'required',
             'amount' => 'required',
-            'description' => 'nullable'
+            'description' => 'required|min:20'
         ];
     }
 
