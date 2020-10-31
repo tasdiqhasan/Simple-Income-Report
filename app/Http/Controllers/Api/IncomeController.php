@@ -25,14 +25,10 @@ class IncomeController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(StoreIncomeRequest $request)
     {
         // validate request
-        $validated = $request->validate([
-            'type' => ['required'],
-            'amount' => ['required'],
-            'description' => ['nullable']
-        ]);
+        $validated = $request->validated();
 
         // save data
         $income = Income::create($validated);
