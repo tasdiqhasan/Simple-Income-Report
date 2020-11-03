@@ -25,6 +25,13 @@
             </div>
         </div>
         <div class="form-group row">
+            <label for="" class="control-label col-md-3 text-md-right">Diterima Tanggal <span class="text-danger">*</span></label>
+            <div class="col-md-9">
+                <input type="date" value="" :class="(errors && errors.received_at) ? 'form-control is-invalid' : 'form-control'" name="received_at" v-model="fields.received_at">
+                <div class="invalid-feedback" v-if="errors && errors.received_at">{{ errors.received_at[0] }}</div>
+            </div>
+        </div>
+        <div class="form-group row">
             <div class="col-md-9 offset-3">
                 <button class="btn btn-primary">Simpan</button>
             </div>

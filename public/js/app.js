@@ -1942,6 +1942,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37723,7 +37730,44 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._m(3)
+      _c("div", { staticClass: "form-group row" }, [
+        _vm._m(3),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-9" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.fields.received_at,
+                expression: "fields.received_at"
+              }
+            ],
+            class:
+              _vm.errors && _vm.errors.received_at
+                ? "form-control is-invalid"
+                : "form-control",
+            attrs: { type: "date", value: "", name: "received_at" },
+            domProps: { value: _vm.fields.received_at },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.fields, "received_at", $event.target.value)
+              }
+            }
+          }),
+          _vm._v(" "),
+          _vm.errors && _vm.errors.received_at
+            ? _c("div", { staticClass: "invalid-feedback" }, [
+                _vm._v(_vm._s(_vm.errors.received_at[0]))
+              ])
+            : _vm._e()
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(4)
     ]
   )
 }
@@ -37772,6 +37816,22 @@ var staticRenderFns = [
       },
       [
         _vm._v("Jumlah "),
+        _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      {
+        staticClass: "control-label col-md-3 text-md-right",
+        attrs: { for: "" }
+      },
+      [
+        _vm._v("Diterima Tanggal "),
         _c("span", { staticClass: "text-danger" }, [_vm._v("*")])
       ]
     )
